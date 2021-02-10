@@ -83,14 +83,14 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.rides').innerHTML = ''
     let response = await fetch('https://kiei451.com/api/rides.json')
     let json = await response.json()
-    let purpleRides = []
+    let dataset = []
     for (let i=0; i<json.length; i++){
       let p = levelOfService(json[i])
       if (p == 'Noober Purple'){
-        purpleRides.push(json[i])
+        dataset.push(json[i])
       }
     }
-  renderRides(purpleRides)
+  renderRides(dataset)
   })
   let nooberPoolButton = document.querySelector('#noober-pool-filter')
   nooberPoolButton.addEventListener('click', async function(event){
@@ -98,14 +98,14 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.rides').innerHTML = ''
     let response = await fetch('https://kiei451.com/api/rides.json')
     let json = await response.json()
-    let poolRides = []
+    let dataset = []
     for (let i=0; i<json.length; i++){
       let p = levelOfService(json[i])
       if (p == 'Noober Pool'){
-        poolRides.push(json[i])
+        dataset.push(json[i])
       }
     }
-  renderRides(poolRides)
+  renderRides(dataset)
   })
   let nooberXLButton = document.querySelector('#noober-xl-filter')
   nooberXLButton.addEventListener('click', async function(event){
@@ -113,14 +113,14 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.rides').innerHTML = ''
     let response = await fetch('https://kiei451.com/api/rides.json')
     let json = await response.json()
-    let xlRides = []
+    let dataset = []
     for (let i=0; i<json.length; i++){
       let p = levelOfService(json[i])
       if (p == 'Noober XL'){
-        xlRides.push(json[i])
+        dataset.push(json[i])
       }
     }
-  renderRides(xlRides)
+  renderRides(dataset)
   })
   let nooberXButton = document.querySelector('#noober-x-filter')
   nooberXButton.addEventListener('click', async function(event){
@@ -128,14 +128,14 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.rides').innerHTML = ''
     let response = await fetch('https://kiei451.com/api/rides.json')
     let json = await response.json()
-    let xRides = []
+    let dataset = []
     for (let i=0; i<json.length; i++){
       let p = levelOfService(json[i])
       if (p == 'Noober X'){
-        xRides.push(json[i])
+        dataset.push(json[i])
       }
     }
-  renderRides(xRides)
+  renderRides(dataset)
 })
 
 })
